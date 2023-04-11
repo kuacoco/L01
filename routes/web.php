@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::controller('StaticPagesController')->group(function () {
+    Route::get('/', 'home');
+    Route::get('/help', 'help');
+    Route::get('/about', 'about');
 });
