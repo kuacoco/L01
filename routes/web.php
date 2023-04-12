@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::controller('StaticPagesController')->group(function () {
-    Route::get('/', 'home');
-    Route::get('/help', 'help');
-    Route::get('/about', 'about');
+    Route::get('/', 'home')->name('home');
+    Route::get('/help', 'help')->name('help');
+    Route::get('/about', 'about')->name('about');
 });
