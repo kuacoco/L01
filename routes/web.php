@@ -17,3 +17,4 @@ Route::controller('StaticPagesController')->group(function () {
     Route::get('/help', 'help')->name('help');
     Route::get('/about', 'about')->name('about');
 });
+Route::get('signup', 'UsersController@create')->name('signup');
